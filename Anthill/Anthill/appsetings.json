@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "ColonyConnection":  "Data Source=Colony.db"
+  }
+}

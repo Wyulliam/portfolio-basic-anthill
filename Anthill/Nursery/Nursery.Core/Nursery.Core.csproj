@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Colony\Colony.Core\Colony.Core.csproj" />
+    <ProjectReference Include="..\..\Infra.Common\Infra.Common.csproj" />
+  </ItemGroup>
+
+</Project>

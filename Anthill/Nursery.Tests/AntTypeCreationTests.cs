@@ -1,7 +1,7 @@
 using NSubstitute;
 using Nursery.Core.AntTypes.Creators;
 using Nursery.Core.AntTypes.DTOs;
-using Nursery.Core.Repositories.Internal;
+using Nursery.Core.Repositories;
 using Xunit;
 
 namespace Nursery.Tests

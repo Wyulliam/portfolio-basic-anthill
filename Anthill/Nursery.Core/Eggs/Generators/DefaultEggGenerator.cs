@@ -1,5 +1,5 @@
 using Nursery.Core.Eggs.DTOs;
-using Nursery.Core.Repositories.Internal;
+using Nursery.Core.Repositories;
 
 namespace Nursery.Core.Eggs.Generators
 {

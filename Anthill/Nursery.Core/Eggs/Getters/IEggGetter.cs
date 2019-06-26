@@ -1,7 +1,7 @@
-﻿using Nursery.Core.Eggs.DTOs;
+using Nursery.Core.Eggs.DTOs;
 using System.Collections.Generic;
 
-namespace Nursery.Core.Eggs.Generators
+namespace Nursery.Core.Eggs.Getters
 {
     interface IEggGetter
     {

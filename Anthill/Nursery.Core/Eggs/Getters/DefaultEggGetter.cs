@@ -1,8 +1,8 @@
-﻿using Nursery.Core.Eggs.DTOs;
-using Nursery.Core.Repositories.Internal;
+using Nursery.Core.Eggs.DTOs;
+using Nursery.Core.Repositories;
 using System.Collections.Generic;
 
-namespace Nursery.Core.Eggs.Generators
+namespace Nursery.Core.Eggs.Getters
 {
     class DefaultEggGetter : IEggGetter
     {

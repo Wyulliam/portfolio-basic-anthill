@@ -1,7 +1,7 @@
 using Nursery.Core.AntTypes.DTOs;
 using System.Collections.Generic;
 
-namespace Nursery.Core.Repositories.Internal
+namespace Nursery.Core.Repositories
 {
     interface IAntTypeRepository
     {

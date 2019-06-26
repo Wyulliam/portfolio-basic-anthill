@@ -1,6 +1,6 @@
 using NSubstitute;
 using Nursery.Core.AntTypes.Getters;
-using Nursery.Core.Repositories.Internal;
+using Nursery.Core.Repositories;
 using Xunit;
 
 namespace Nursery.Tests

@@ -1,5 +1,5 @@
 using Nursery.Core.AntTypes.DTOs;
-using Nursery.Core.Repositories.Internal;
+using Nursery.Core.Repositories;
 using System.Collections.Generic;
 
 namespace Nursery.Core.AntTypes.Getters

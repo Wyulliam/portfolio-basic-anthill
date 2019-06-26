@@ -1,8 +1,10 @@
-﻿using Anthill.Core;
 using NSubstitute;
+using Nursery.Core.Eggs.DTOs;
+using Nursery.Core.Eggs.Generators;
+using Nursery.Core.Repositories.Internal;
 using Xunit;
 
-namespace AntHill.Tests
+namespace Nursery.Tests
 {
     public class DefaultEggGeneratorTests
     {

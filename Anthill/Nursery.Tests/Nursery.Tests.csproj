@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Anthill.Core\Anthill.Core.csproj" />
     <ProjectReference Include="..\Nursery.Core\Nursery.Core.csproj" />
   </ItemGroup>
 

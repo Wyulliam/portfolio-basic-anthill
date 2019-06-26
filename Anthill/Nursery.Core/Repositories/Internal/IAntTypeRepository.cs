@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+using Nursery.Core.AntTypes.DTOs;
+using System.Collections.Generic;
 
-namespace Anthill.Core
+namespace Nursery.Core.Repositories.Internal
 {
     interface IAntTypeRepository
     {

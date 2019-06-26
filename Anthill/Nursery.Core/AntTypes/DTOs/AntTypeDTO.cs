@@ -1,4 +1,4 @@
-﻿namespace Anthill.Core
+namespace Nursery.Core.AntTypes.DTOs
 {
     class AntTypeDTO
     {

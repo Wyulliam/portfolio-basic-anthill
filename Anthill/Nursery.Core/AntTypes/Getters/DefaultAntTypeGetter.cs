@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+using Nursery.Core.AntTypes.DTOs;
+using Nursery.Core.Repositories.Internal;
+using System.Collections.Generic;
 
-namespace Anthill.Core
+namespace Nursery.Core.AntTypes.Getters
 {
     class DefaultAntTypeGetter : IAntTypeGetter
     {

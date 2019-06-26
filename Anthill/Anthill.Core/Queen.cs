@@ -1,4 +1,6 @@
-﻿namespace Anthill.Core
+﻿using Nursery.Core;
+
+namespace Anthill.Core
 {
     class Queen : IQueen
     {

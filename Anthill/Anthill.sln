@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anthill.Core", "Anthill.Core\Anthill.Core.csproj", "{4015451B-71E6-4107-AE4D-7510DC0B7F4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anthill.Core", "Anthill.Core\Anthill.Core.csproj", "{4015451B-71E6-4107-AE4D-7510DC0B7F4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntHill.Tests", "AntHill.Tests\AntHill.Tests.csproj", "{C097943A-10CF-45CC-BC54-6A7D7EA26DE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntHill.Tests", "AntHill.Tests\AntHill.Tests.csproj", "{C097943A-10CF-45CC-BC54-6A7D7EA26DE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nursery.Core", "Nursery.Core\Nursery.Core.csproj", "{16B38B9B-3D59-4D06-9AD9-A4B4E1CED8E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nursery.Tests", "Nursery.Tests\Nursery.Tests.csproj", "{8E238D6B-89FD-4D1E-874B-D052AF6F1944}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nursery.Data", "Nursery.Data\Nursery.Data.csproj", "{1815BCE7-DBF4-4253-93D2-870CECB22904}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{C097943A-10CF-45CC-BC54-6A7D7EA26DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C097943A-10CF-45CC-BC54-6A7D7EA26DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C097943A-10CF-45CC-BC54-6A7D7EA26DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B38B9B-3D59-4D06-9AD9-A4B4E1CED8E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B38B9B-3D59-4D06-9AD9-A4B4E1CED8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B38B9B-3D59-4D06-9AD9-A4B4E1CED8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B38B9B-3D59-4D06-9AD9-A4B4E1CED8E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E238D6B-89FD-4D1E-874B-D052AF6F1944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E238D6B-89FD-4D1E-874B-D052AF6F1944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E238D6B-89FD-4D1E-874B-D052AF6F1944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E238D6B-89FD-4D1E-874B-D052AF6F1944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1815BCE7-DBF4-4253-93D2-870CECB22904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1815BCE7-DBF4-4253-93D2-870CECB22904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1815BCE7-DBF4-4253-93D2-870CECB22904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1815BCE7-DBF4-4253-93D2-870CECB22904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

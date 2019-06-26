@@ -1,19 +1,20 @@
-﻿using System.Linq;
+﻿using Nursery.Core;
+using System.Linq;
 
 namespace Anthill.Core
 {
     internal class EggsIncubatingReporter : IReporter
     {
-        private INurseryRepository _nurseryRepository;
+        private INursery _nursery;
 
-        public EggsIncubatingReporter(INurseryRepository nurseryRepository)
+        public EggsIncubatingReporter(INursery nurseryRepository)
         {
-            _nurseryRepository = nurseryRepository;
+            _nursery = nurseryRepository;
         }
 
         public string Report()
         {
-            var eggs = _nurseryRepository.GetEggs();
+            var eggs = _nursery.GetEggs();
 
             return string.Join("; ", eggs.Select(s => s.ToString()));
         }

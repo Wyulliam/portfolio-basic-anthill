@@ -1,8 +1,9 @@
-﻿using Anthill.Core;
 using NSubstitute;
+using Nursery.Core.AntTypes.Getters;
+using Nursery.Core.Repositories.Internal;
 using Xunit;
 
-namespace AntHill.Tests
+namespace Nursery.Tests
 {
     public class DefaultAntTypeGetterTests
     {

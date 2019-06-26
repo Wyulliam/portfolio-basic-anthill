@@ -1,4 +1,7 @@
-﻿namespace Anthill.Core
+using Nursery.Core.Eggs.DTOs;
+using Nursery.Core.Repositories.Internal;
+
+namespace Nursery.Core.Eggs.Generators
 {
     class DefaultEggGenerator : IEggGenerator
     {

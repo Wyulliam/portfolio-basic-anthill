@@ -1,8 +1,10 @@
-﻿using Anthill.Core;
 using NSubstitute;
+using Nursery.Core.AntTypes.Creators;
+using Nursery.Core.AntTypes.DTOs;
+using Nursery.Core.Repositories.Internal;
 using Xunit;
 
-namespace AntHill.Tests
+namespace Nursery.Tests
 {
     public class AntTypeCreationTests
     {

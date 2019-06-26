@@ -1,4 +1,7 @@
-﻿namespace Anthill.Core
+using Nursery.Core.AntTypes.DTOs;
+using Nursery.Core.Repositories.Internal;
+
+namespace Nursery.Core.AntTypes.Creators
 {
     class AntTypeDefaultCreator : IAntTypeCreator
     {

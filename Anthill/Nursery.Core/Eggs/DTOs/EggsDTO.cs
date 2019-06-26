@@ -1,6 +1,6 @@
-﻿namespace Anthill.Core
+namespace Nursery.Core.Eggs.DTOs
 {
-    class EggsDTO
+    public class EggsDTO
     {
         public EggsDTO(int quantity, string type)
         {

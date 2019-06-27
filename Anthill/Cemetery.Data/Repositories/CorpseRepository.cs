@@ -9,7 +9,11 @@ namespace Cemetery.Data.Repositories
     {
         public IReadOnlyCollection<CorpsesDTO> Get()
         {
-            throw new NotImplementedException();
+            return new List<CorpsesDTO>()
+            {
+                new CorpsesDTO(5, "Warrior"),
+                new CorpsesDTO(12, "Workers")
+            };
         }
     }
 }

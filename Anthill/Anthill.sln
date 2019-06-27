@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colony.Data", "Colony.Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cemetery.Data", "Cemetery.Data\Cemetery.Data.csproj", "{87210A6C-D6A3-4063-93FD-A07F2374FE9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anthill.Service", "Anthill.Service\Anthill.Service.csproj", "{AD5EB236-9402-4E99-9391-74D08B97BB5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,10 @@ Global
 		{87210A6C-D6A3-4063-93FD-A07F2374FE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87210A6C-D6A3-4063-93FD-A07F2374FE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87210A6C-D6A3-4063-93FD-A07F2374FE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5EB236-9402-4E99-9391-74D08B97BB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5EB236-9402-4E99-9391-74D08B97BB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5EB236-9402-4E99-9391-74D08B97BB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5EB236-9402-4E99-9391-74D08B97BB5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +121,7 @@ Global
 		{44907022-0C27-4389-A028-065FE7146924} = {69D09EAC-47E7-43AC-ACF2-F6421355C1DC}
 		{66533C74-5520-4BB3-B5A8-3D00802B02EB} = {69D09EAC-47E7-43AC-ACF2-F6421355C1DC}
 		{87210A6C-D6A3-4063-93FD-A07F2374FE9D} = {8EFF854B-84DC-41E5-94E4-31D77C9AA994}
+		{AD5EB236-9402-4E99-9391-74D08B97BB5C} = {2AB8408D-A312-4CBB-8D18-594CBF97859D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB73E512-D1B5-4DBE-8D37-ADAD6413C382}

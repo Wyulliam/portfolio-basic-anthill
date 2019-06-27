@@ -9,7 +9,11 @@ namespace Colony.Data.Repositories
     {
         public IReadOnlyCollection<AntsDTO> Get()
         {
-            throw new NotImplementedException();
+            return new List<AntsDTO>()
+            {
+                new AntsDTO(7, "Warrior"),
+                new AntsDTO(4, "Workers")
+            };
         }
     }
 }

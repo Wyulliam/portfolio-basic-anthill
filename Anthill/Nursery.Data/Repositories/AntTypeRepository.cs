@@ -13,7 +13,11 @@ namespace Nursery.Data.Repositories
 
         public IReadOnlyCollection<AntTypeDTO> Get()
         {
-            throw new System.NotImplementedException();
+            return new List<AntTypeDTO>()
+            {
+                new AntTypeDTO("Warrior"),
+                new AntTypeDTO("Worker")
+            };
         }
     }
 }

@@ -13,7 +13,11 @@ namespace Nursery.Data.Repositories
 
         public IReadOnlyCollection<EggsDTO> Get()
         {
-            throw new System.NotImplementedException();
+            return new List<EggsDTO>()
+            {
+                new EggsDTO(7, "Warrior"),
+                new EggsDTO(4, "Workers")
+            };
         }
     }
 }

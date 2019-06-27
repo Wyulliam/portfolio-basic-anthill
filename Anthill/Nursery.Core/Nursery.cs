@@ -14,12 +14,12 @@ namespace Nursery.Core
         private readonly IAntTypeCreator _typeCreator;
         private readonly IAntTypeGetter _antTypeGetter;
 
-        public Nursery(IEggGenerator eggGenerator, IEggGetter eggGetter, IAntTypeCreator typeCreator, IAntTypeGetter antTypeGetter)
+        public Nursery(INurseryAbstractFactory factory)
         {
-            _antTypeGetter = antTypeGetter;
-            _typeCreator = typeCreator;
-            _eggGenerator = eggGenerator;
-            _eggGetter = eggGetter;
+            _antTypeGetter = factory.BuildAntTypeGetter();
+            _typeCreator = factory.BuildAntTypeCreator();
+            _eggGenerator = factory.BuildEggGenerator();
+            _eggGetter = factory.BuildEggGetter();
         }
 
         public void CreateType(string type)

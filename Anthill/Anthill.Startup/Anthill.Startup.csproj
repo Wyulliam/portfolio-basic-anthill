@@ -13,6 +13,7 @@
     <ProjectReference Include="..\Colony.Core\Colony.Core.csproj" />
     <ProjectReference Include="..\Colony.Startup\Colony.Startup.csproj" />
     <ProjectReference Include="..\Nursery.Core\Nursery.Core.csproj" />
+    <ProjectReference Include="..\Nursery.Startup\Nursery.Startup.csproj" />
     <ProjectReference Include="..\Reporters.Core\Reporters.Core.csproj" />
     <ProjectReference Include="..\Reporters.Startup\Reporters.Startup.csproj" />
   </ItemGroup>

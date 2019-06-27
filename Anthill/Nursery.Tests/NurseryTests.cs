@@ -16,13 +16,22 @@ namespace AntHill.Tests
         private IAntTypeCreator _typeCreator;
         private IAntTypeGetter _typeGetter;
 
+        private INurseryAbstractFactory _factory;
+
         public NurseryTests()
         {
             _eggGetter = Substitute.For<IEggGetter>();
             _eggGenerator = Substitute.For<IEggGenerator>();
             _typeCreator = Substitute.For<IAntTypeCreator>();
             _typeGetter = Substitute.For<IAntTypeGetter>();
-            _nursery = new Nursery.Core.Nursery(_eggGenerator, _eggGetter, _typeCreator, _typeGetter);
+
+            _factory = Substitute.For<INurseryAbstractFactory>();
+            _factory.BuildEggGetter().Returns(_eggGetter);
+            _factory.BuildEggGenerator().Returns(_eggGenerator);
+            _factory.BuildAntTypeCreator().Returns(_typeCreator);
+            _factory.BuildAntTypeGetter().Returns(_typeGetter);
+
+            _nursery = new Nursery.Core.Nursery(_factory);
         }
 
         [Fact]
@@ -56,6 +65,5 @@ namespace AntHill.Tests
 
             _eggGetter.Received(1).Get();
         }
-
     }
 }

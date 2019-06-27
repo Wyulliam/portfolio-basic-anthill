@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reporters.Startup", "Report
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nursery.Startup", "Nursery.Startup\Nursery.Startup.csproj", "{3CE7CA1C-3682-44AB-956C-DE8CFE3ECB4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cemetery.Startup", "Cemetery.Startup\Cemetery.Startup.csproj", "{4E152A47-0B6F-4FB1-9610-D490A2203884}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -127,6 +129,10 @@ Global
 		{3CE7CA1C-3682-44AB-956C-DE8CFE3ECB4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CE7CA1C-3682-44AB-956C-DE8CFE3ECB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CE7CA1C-3682-44AB-956C-DE8CFE3ECB4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E152A47-0B6F-4FB1-9610-D490A2203884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E152A47-0B6F-4FB1-9610-D490A2203884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E152A47-0B6F-4FB1-9610-D490A2203884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E152A47-0B6F-4FB1-9610-D490A2203884}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -150,6 +156,7 @@ Global
 		{667258E9-1E86-40DD-B63E-ED8638A74CFD} = {69D09EAC-47E7-43AC-ACF2-F6421355C1DC}
 		{5ED437E0-423F-4214-8CB4-74F9DAF272C1} = {5140B8C3-E818-4267-AD21-4B2251B2977C}
 		{3CE7CA1C-3682-44AB-956C-DE8CFE3ECB4F} = {1356BF3E-2031-4816-B19E-F396BBCE1309}
+		{4E152A47-0B6F-4FB1-9610-D490A2203884} = {8EFF854B-84DC-41E5-94E4-31D77C9AA994}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB73E512-D1B5-4DBE-8D37-ADAD6413C382}

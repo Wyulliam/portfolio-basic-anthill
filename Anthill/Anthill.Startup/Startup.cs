@@ -1,4 +1,5 @@
-﻿using Colony.Startup;
+﻿using Cemetery.Startup;
+using Colony.Startup;
 using Microsoft.Extensions.DependencyInjection;
 using Nursery.Startup;
 using Reporters.Startup;
@@ -12,6 +13,7 @@ namespace Anthill.Startup
             services.RegisterColonyServices();
             services.RegisterReportersServices();
             services.RegisterNurseryServices();
+            services.RegisterCemeteryServices();
         }
     }
 }

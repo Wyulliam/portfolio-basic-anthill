@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cemetery.Core\Cemetery.Core.csproj" />
+    <ProjectReference Include="..\Cemetery.Startup\Cemetery.Startup.csproj" />
     <ProjectReference Include="..\Colony.Core\Colony.Core.csproj" />
     <ProjectReference Include="..\Colony.Startup\Colony.Startup.csproj" />
     <ProjectReference Include="..\Nursery.Core\Nursery.Core.csproj" />

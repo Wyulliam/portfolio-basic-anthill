@@ -16,7 +16,9 @@ namespace Reporters.Core.Reporters.StatusReporters
         {
             var corpses = _cemeteryRepository.GetCorpses();
 
-            return string.Join("; ", corpses.Select(s => s.ToString()));
+            var cemeteryReport = string.Join("; ", corpses.Select(s => s.ToString()));
+
+            return $"Dead Ants: {cemeteryReport}";
         }
     }
 }

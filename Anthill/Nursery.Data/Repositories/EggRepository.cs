@@ -8,7 +8,7 @@ namespace Nursery.Data.Repositories
     {
         public void Create(EggsDTO eggs)
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public IReadOnlyCollection<EggsDTO> Get()

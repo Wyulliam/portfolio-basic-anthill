@@ -1,5 +1,7 @@
 ﻿using Nursery.Core;
 using Reporters.Core;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Anthill.Core
 {
@@ -16,24 +18,28 @@ namespace Anthill.Core
             _nursery = nursery;
         }
 
-        public void LayEggs(int quantity, string type)
+        public string LayEggs(int quantity, string type)
         {
             _nursery.IncubateEggs(quantity, type);
+
+            return $"Layed {quantity} {type} ant eggs";
         }
 
-        public void CheckColony()
+        public string CheckAnthill()
         {
-            _statusReporter.Report();
+            return _statusReporter.Report();
         }
 
-        public void CreateType(string type)
+        public string CreateType(string type)
         {
             _nursery.CreateType(type);
+
+            return $"{type} type created";
         }
 
-        public void GetAntTypes()
+        public IReadOnlyCollection<string> GetAntTypes()
         {
-            _nursery.GetAntTypes();
+            return _nursery.GetAntTypes().Select(s => s.Type).ToList();
         }
     }
 }

@@ -1,10 +1,12 @@
-﻿namespace Anthill.Core
+﻿using System.Collections.Generic;
+
+namespace Anthill.Core
 {
     public interface IQueen
     {
-        void CreateType(string type);
-        void GetAntTypes();
-        void LayEggs(int quantity, string type);
-        void CheckColony();
+        string CreateType(string type);
+        IReadOnlyCollection<string> GetAntTypes();
+        string LayEggs(int quantity, string type);
+        string CheckAnthill();
     }
 }

@@ -1,6 +1,6 @@
 namespace Nursery.Core.AntTypes.DTOs
 {
-    class AntTypeDTO
+    public class AntTypeDTO
     {
         public AntTypeDTO(string type)
         {

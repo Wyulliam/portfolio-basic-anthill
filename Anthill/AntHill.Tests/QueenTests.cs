@@ -47,7 +47,7 @@ namespace AntHill.Tests
         [Fact]
         public void should_check_colony_status()
         {
-            _queen.CheckColony();
+            _queen.CheckAnthill();
 
             _statusReporter.Received(1).Report();
         }

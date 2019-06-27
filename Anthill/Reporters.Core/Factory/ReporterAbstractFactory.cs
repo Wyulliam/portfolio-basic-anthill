@@ -25,7 +25,7 @@ namespace Reporters.Core.Factory
             var eggsIncubatingReporter = new EggsIncubatingReporter(_nursery);
             var livingAntsReporter = new LivingAntsReporter(_colony);
 
-            return new DefaultAnthillStatusReporter(deadAntsReporter);
+            return new DefaultAnthillStatusReporter(livingAntsReporter, eggsIncubatingReporter, deadAntsReporter);
         }
     }
 }

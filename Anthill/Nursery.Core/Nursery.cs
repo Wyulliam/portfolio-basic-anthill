@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Nursery.Core.AntTypes.Creators;
+using Nursery.Core.AntTypes.DTOs;
 using Nursery.Core.AntTypes.Getters;
 using Nursery.Core.Eggs.DTOs;
 using Nursery.Core.Eggs.Generators;
@@ -28,9 +29,9 @@ namespace Nursery.Core
             _typeCreator.Create(type);
         }
 
-        public void GetAntTypes()
+        public IReadOnlyCollection<AntTypeDTO> GetAntTypes()
         {
-            _antTypeGetter.Get();
+            return _antTypeGetter.Get();
         }
 
         public IReadOnlyCollection<EggsDTO> GetEggs()

@@ -1,3 +1,4 @@
+using Nursery.Core.AntTypes.DTOs;
 using Nursery.Core.Eggs.DTOs;
 using System.Collections.Generic;
 
@@ -7,7 +8,7 @@ namespace Nursery.Core
     {
         void IncubateEggs(int quantity, string type);
         void CreateType(string type);
-        void GetAntTypes();
+        IReadOnlyCollection<AntTypeDTO> GetAntTypes();
         IReadOnlyCollection<EggsDTO> GetEggs();
     }
 }

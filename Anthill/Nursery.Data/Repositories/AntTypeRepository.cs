@@ -8,7 +8,7 @@ namespace Nursery.Data.Repositories
     {
         public void Create(AntTypeDTO type)
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public IReadOnlyCollection<AntTypeDTO> Get()

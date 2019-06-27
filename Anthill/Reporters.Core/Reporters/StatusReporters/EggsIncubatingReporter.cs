@@ -16,7 +16,9 @@ namespace Reporters.Core.Reporters.StatusReporters
         {
             var eggs = _nursery.GetEggs();
 
-            return string.Join("; ", eggs.Select(s => s.ToString()));
+            var eggsReport =  string.Join("; ", eggs.Select(s => s.ToString()));
+
+            return $"Eggs Incubating: {eggsReport}";
         }
     }
 }

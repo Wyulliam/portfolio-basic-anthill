@@ -20,7 +20,7 @@ namespace Reporters.Core.Reporters.AnthillStatusReporter
 
             foreach (var reporter in _reporters)
             {
-                report.Append(reporter.Report());
+                report.Append($"{reporter.Report()} \n");
             }
 
             return report.ToString();

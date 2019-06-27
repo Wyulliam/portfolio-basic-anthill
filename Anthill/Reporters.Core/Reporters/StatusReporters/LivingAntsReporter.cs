@@ -16,7 +16,9 @@ namespace Reporters.Core.Reporters.StatusReporters
         {
             var ants = _colony.GetAnts();
 
-            return string.Join("; ", ants.Select(s => s.ToString()));
+            var livingAntsReport = string.Join("; ", ants.Select(s => s.ToString()));
+
+            return $"Living Ants: {livingAntsReport}";
         }
     }
 }

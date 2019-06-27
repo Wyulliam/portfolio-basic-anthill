@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Reporters.Core;
-using System;
+using Reporters.Core.Factory;
 
 namespace Reporters.Startup
 {
@@ -8,6 +8,8 @@ namespace Reporters.Startup
     {
         public static IServiceCollection RegisterReportersServices(this IServiceCollection services)
         {
+            services.AddScoped<IReporter, Reporter>();
+            services.AddScoped<IReporterAbstractFactory, ReporterAbstractFactory>();
 
             return services;
         }

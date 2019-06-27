@@ -1,6 +1,6 @@
 namespace Reporters.Core
 {
-    public interface IStatusReporter
+    public interface IReporter
     {
         string Report();
     }

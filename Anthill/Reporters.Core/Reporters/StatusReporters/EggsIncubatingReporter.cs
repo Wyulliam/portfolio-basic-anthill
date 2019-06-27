@@ -1,9 +1,9 @@
 using Nursery.Core;
 using System.Linq;
 
-namespace Reporters.Core.Reporters
+namespace Reporters.Core.Reporters.StatusReporters
 {
-    internal class EggsIncubatingReporter : IReporter
+    internal class EggsIncubatingReporter : StatusReporter
     {
         private INursery _nursery;
 
@@ -12,7 +12,7 @@ namespace Reporters.Core.Reporters
             _nursery = nurseryRepository;
         }
 
-        public string Report()
+        public override string Report()
         {
             var eggs = _nursery.GetEggs();
 

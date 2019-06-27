@@ -1,5 +1,5 @@
-﻿using Anthill.Core;
-using System;
+﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Anthill.Service
 {
@@ -7,7 +7,8 @@ namespace Anthill.Service
     {
         static void Main(string[] args)
         {
-            
+            WebHost.CreateDefaultBuilder(args).UseStartup<Startup.Startup>();
+
         }
     }
 }

@@ -1,23 +1,23 @@
 using FluentAssertions;
 using NSubstitute;
-using Reporters.Core;
-using Reporters.Core.Reporters;
+using Reporters.Core.Reporters.AnthillStatusReporter;
+using Reporters.Core.Reporters.StatusReporters;
 using Xunit;
 
 namespace Reporters.Tests
 {
-    public class DefaultStatusReporterTests
+    public class DefaultAnthillStatusReporterTests
     {
-        private IStatusReporter _statusReporter;
-        private IReporter _randomReporter1;
-        private IReporter _randomReporter2;
+        private IAnthillStatusReporter _statusReporter;
+        private StatusReporter _randomReporter1;
+        private StatusReporter _randomReporter2;
 
-        public DefaultStatusReporterTests()
+        public DefaultAnthillStatusReporterTests()
         {
-            _randomReporter1 = Substitute.For<IReporter>();
-            _randomReporter2 = Substitute.For<IReporter>();
+            _randomReporter1 = Substitute.For<StatusReporter>();
+            _randomReporter2 = Substitute.For<StatusReporter>();
 
-            _statusReporter = new DefaultStatusReporter(_randomReporter1, _randomReporter2);
+            _statusReporter = new DefaultAnthillStatusReporter(_randomReporter1, _randomReporter2);
         }
 
         [Fact]

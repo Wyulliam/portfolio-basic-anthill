@@ -1,9 +1,9 @@
 using Colony.Core;
 using System.Linq;
 
-namespace Reporters.Core.Reporters
+namespace Reporters.Core.Reporters.StatusReporters
 {
-    internal class LivingAntsReporter : IReporter
+    internal class LivingAntsReporter : StatusReporter
     {
         private IColony _colony;
 
@@ -12,7 +12,7 @@ namespace Reporters.Core.Reporters
             _colony = colony;
         }
 
-        public string Report()
+        public override string Report()
         {
             var ants = _colony.GetAnts();
 

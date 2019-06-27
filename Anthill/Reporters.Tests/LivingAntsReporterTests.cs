@@ -1,9 +1,8 @@
-using Anthill.Core;
 using Colony.Core;
 using Colony.Core.Ants.DTOs;
 using FluentAssertions;
 using NSubstitute;
-using Reporters.Core.Reporters;
+using Reporters.Core.Reporters.StatusReporters;
 using System.Collections.Generic;
 using Xunit;
 
@@ -11,7 +10,7 @@ namespace Reporters.Tests
 {
     public class LivingAntsReporterTests
     {
-        private IReporter _reporter;
+        private StatusReporter _reporter;
         private IColony _colony;
 
         public LivingAntsReporterTests()

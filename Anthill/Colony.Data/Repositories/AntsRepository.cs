@@ -1,6 +1,5 @@
 ﻿using Colony.Core.Ants.DTOs;
 using Colony.Core.Repositories;
-using System;
 using System.Collections.Generic;
 
 namespace Colony.Data.Repositories

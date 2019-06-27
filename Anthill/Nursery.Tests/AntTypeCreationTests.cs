@@ -14,7 +14,7 @@ namespace Nursery.Tests
         public AntTypeCreationTests()
         {
             _repository = Substitute.For<IAntTypeRepository>();
-            _creator = new AntTypeDefaultCreator(_repository);
+            _creator = new DefaultAntTypeCreator(_repository);
         }
 
         [Fact]

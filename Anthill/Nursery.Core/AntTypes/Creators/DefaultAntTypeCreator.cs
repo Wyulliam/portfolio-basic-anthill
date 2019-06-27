@@ -3,11 +3,11 @@ using Nursery.Core.Repositories;
 
 namespace Nursery.Core.AntTypes.Creators
 {
-    class AntTypeDefaultCreator : IAntTypeCreator
+    class DefaultAntTypeCreator : IAntTypeCreator
     {
         private IAntTypeRepository _repository;
 
-        public AntTypeDefaultCreator(IAntTypeRepository repository)
+        public DefaultAntTypeCreator(IAntTypeRepository repository)
         {
             _repository = repository;
         }

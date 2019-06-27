@@ -6,11 +6,11 @@ namespace Anthill.Core
     class Queen : IQueen
     {
         private INursery _nursery;
-        private IStatusReporter _statusReporter;
+        private IReporter _statusReporter;
 
         public Queen(
             INursery nursery, 
-            IStatusReporter statusReporter)
+            IReporter statusReporter)
         {
             _statusReporter = statusReporter;
             _nursery = nursery;

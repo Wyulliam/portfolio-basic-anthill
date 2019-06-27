@@ -1,16 +1,16 @@
-using Reporters.Core.Reporters;
+using Reporters.Core.Reporters.StatusReporters;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reporters.Core
+namespace Reporters.Core.Reporters.AnthillStatusReporter
 {
-    class DefaultStatusReporter : IStatusReporter
+    class DefaultAnthillStatusReporter : IAnthillStatusReporter
     {
-        private List<IReporter> _reporters;
+        private List<StatusReporter> _reporters;
 
-        public DefaultStatusReporter(params IReporter[] reporters)
+        public DefaultAnthillStatusReporter(params StatusReporter[] reporters)
         {
-            _reporters = new List<IReporter>();
+            _reporters = new List<StatusReporter>();
             _reporters.AddRange(reporters);
         }
 

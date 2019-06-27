@@ -1,9 +1,9 @@
 using Cemetery.Core;
 using System.Linq;
 
-namespace Reporters.Core.Reporters
+namespace Reporters.Core.Reporters.StatusReporters
 {
-    internal class DeadAntsReporter : IReporter
+    internal class DeadAntsReporter : StatusReporter
     {
         private ICemetery _cemeteryRepository;
 
@@ -12,7 +12,7 @@ namespace Reporters.Core.Reporters
             _cemeteryRepository = cemetery;
         }
 
-        public string Report()
+        public override string Report()
         {
             var corpses = _cemeteryRepository.GetCorpses();
 

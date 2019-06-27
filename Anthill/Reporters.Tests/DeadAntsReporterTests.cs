@@ -2,7 +2,7 @@ using Cemetery.Core;
 using Cemetery.Core.Corpses.DTOs;
 using FluentAssertions;
 using NSubstitute;
-using Reporters.Core.Reporters;
+using Reporters.Core.Reporters.StatusReporters;
 using System.Collections.Generic;
 using Xunit;
 
@@ -10,7 +10,7 @@ namespace Reporters.Tests
 {
     public class DeadAntsReporterTests
     {
-        private IReporter _reporter;
+        private StatusReporter _reporter;
         private ICemetery _cemetery;
 
         public DeadAntsReporterTests()

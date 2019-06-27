@@ -10,13 +10,13 @@ namespace AntHill.Tests
     {
         private readonly IQueen _queen;
         private readonly INursery _nursery;
-        private readonly IStatusReporter _statusReporter;
+        private readonly IReporter _statusReporter;
 
 
         public QueenTests()
         {
             _nursery = Substitute.For<INursery>();
-            _statusReporter = Substitute.For<IStatusReporter>();
+            _statusReporter = Substitute.For<IReporter>();
             _queen = new Queen(_nursery, _statusReporter);
         }
 

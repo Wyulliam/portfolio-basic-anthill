@@ -2,7 +2,7 @@ using FluentAssertions;
 using NSubstitute;
 using Nursery.Core;
 using Nursery.Core.Eggs.DTOs;
-using Reporters.Core.Reporters;
+using Reporters.Core.Reporters.StatusReporters;
 using System.Collections.Generic;
 using Xunit;
 
@@ -10,7 +10,7 @@ namespace Reporters.Tests
 {
     public class EggsIncubatingReporterTests
     {
-        private IReporter _reporter;
+        private StatusReporter _reporter;
         private INursery _nursery;
 
         public EggsIncubatingReporterTests()

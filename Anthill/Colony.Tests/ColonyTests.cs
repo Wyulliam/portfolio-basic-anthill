@@ -1,5 +1,6 @@
 using Colony.Core;
 using Colony.Core.Ants.Getters;
+using Colony.Core.Factory;
 using NSubstitute;
 using Xunit;
 
@@ -9,11 +10,16 @@ namespace Colony.Tests
     {
         private IColony _colony;
         private IAntsGetter _antsGetter;
+        private IColonyAbstractFactory _factory;
 
         public ColonyTests()
         {
             _antsGetter = Substitute.For<IAntsGetter>();
-            _colony = new Core.Colony(_antsGetter);
+            _factory = Substitute.For<IColonyAbstractFactory>();
+
+            _factory.BuildAntsGetter().Returns(_antsGetter);
+
+            _colony = new Core.Colony(_factory);
         }
 
         [Fact]

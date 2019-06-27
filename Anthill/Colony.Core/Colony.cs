@@ -1,5 +1,6 @@
 ﻿using Colony.Core.Ants.DTOs;
 using Colony.Core.Ants.Getters;
+using Colony.Core.Factory;
 using System.Collections.Generic;
 
 namespace Colony.Core
@@ -8,9 +9,9 @@ namespace Colony.Core
     {
         private readonly IAntsGetter _antsGetter;
 
-        public Colony(IAntsGetter antsGetter)
+        public Colony(IColonyAbstractFactory factory)
         {
-            _antsGetter = antsGetter;
+            _antsGetter = factory.BuildAntsGetter();
         }
 
         public IReadOnlyCollection<AntsDTO> GetAnts()

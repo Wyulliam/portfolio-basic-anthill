@@ -1,8 +1,8 @@
-﻿namespace Anthill.Core
+namespace Colony.Core.Ants.DTOs
 {
-    class CorpsesDTO
+    public class AntsDTO
     {
-        public CorpsesDTO(int quantity, string type)
+        public AntsDTO(int quantity, string type)
         {
             Quantity = quantity;
             Type = type;
@@ -13,7 +13,7 @@
 
         public override string ToString()
         {
-            return $"There are {Quantity} dead {Type} ants";
+            return $"There are {Quantity} {Type} ants";
         }
     }
 }

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cemetery.Core\Cemetery.Core.csproj" />
+    <ProjectReference Include="..\Colony.Core\Colony.Core.csproj" />
     <ProjectReference Include="..\Nursery.Core\Nursery.Core.csproj" />
   </ItemGroup>
 

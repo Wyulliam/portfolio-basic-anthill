@@ -1,19 +1,20 @@
+using Colony.Core;
 using System.Linq;
 
 namespace Reporters.Core.Reporters
 {
     internal class LivingAntsReporter : IReporter
     {
-        private IColonyRepository _repository;
+        private IColony _colony;
 
-        public LivingAntsReporter(IColonyRepository repository)
+        public LivingAntsReporter(IColony colony)
         {
-            _repository = repository;
+            _colony = colony;
         }
 
         public string Report()
         {
-            var ants = _repository.GetAnts();
+            var ants = _colony.GetAnts();
 
             return string.Join("; ", ants.Select(s => s.ToString()));
         }

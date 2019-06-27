@@ -1,3 +1,6 @@
+using Anthill.Core;
+using Colony.Core;
+using Colony.Core.Ants.DTOs;
 using FluentAssertions;
 using NSubstitute;
 using Reporters.Core.Reporters;
@@ -9,12 +12,12 @@ namespace Reporters.Tests
     public class LivingAntsReporterTests
     {
         private IReporter _reporter;
-        private IColonyRepository _colonyRepository;
+        private IColony _colony;
 
         public LivingAntsReporterTests()
         {
-            _colonyRepository = Substitute.For<IColonyRepository>();
-            _reporter = new LivingAntsReporter(_colonyRepository);
+            _colony = Substitute.For<IColony>();
+            _reporter = new LivingAntsReporter(_colony);
         }
 
         [Fact]
@@ -22,13 +25,13 @@ namespace Reporters.Tests
         {
             _reporter.Report();
 
-            _colonyRepository.Received(1).GetAnts();
+            _colony.Received(1).GetAnts();
         }
 
         [Fact]
         public void should_report_how_many_ants_are_alive()
         {
-            _colonyRepository.GetAnts().Returns(new List<AntsDTO>() { new AntsDTO(5, "Warrior"), new AntsDTO(10, "Workers") });
+            _colony.GetAnts().Returns(new List<AntsDTO>() { new AntsDTO(5, "Warrior"), new AntsDTO(10, "Workers") });
 
             var report = _reporter.Report();
 

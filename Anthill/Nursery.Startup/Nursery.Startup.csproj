@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Nursery.Core\Nursery.Core.csproj" />
+    <ProjectReference Include="..\Nursery.Data\Nursery.Data.csproj" />
   </ItemGroup>
 
 </Project>

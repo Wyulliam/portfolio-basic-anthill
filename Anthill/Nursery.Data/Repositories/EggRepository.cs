@@ -4,7 +4,7 @@ using Nursery.Core.Repositories;
 
 namespace Nursery.Data.Repositories
 {
-    class EggsRepository : IEggRepository
+    class EggRepository : IEggRepository
     {
         public void Create(EggsDTO eggs)
         {

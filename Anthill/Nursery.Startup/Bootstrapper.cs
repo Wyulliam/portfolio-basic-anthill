@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Nursery.Core;
 using Nursery.Core.Factory;
+using Nursery.Core.Repositories;
+using Nursery.Data.Repositories;
 
 namespace Nursery.Startup
 {
@@ -11,6 +13,8 @@ namespace Nursery.Startup
             services.AddScoped<INursery, Core.Nursery>();
             services.AddScoped<INurseryAbstractFactory, NurseryAbstractFactory>();
 
+            services.AddScoped<IAntTypeRepository, AntTypeRepository>();
+            services.AddScoped<IEggRepository, EggRepository>();
             return services;
         }
     }

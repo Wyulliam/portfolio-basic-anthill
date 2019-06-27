@@ -1,9 +1,10 @@
-﻿using Anthill.Core;
 using FluentAssertions;
 using NSubstitute;
+using Reporters.Core;
+using Reporters.Core.Reporters;
 using Xunit;
 
-namespace AntHill.Tests
+namespace Reporters.Tests
 {
     public class DefaultStatusReporterTests
     {

@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
-namespace Anthill.Core
+namespace Cemetery.Core.Repositories
 {
     interface ICemeteryRepository
     {

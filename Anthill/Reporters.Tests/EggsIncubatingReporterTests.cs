@@ -1,12 +1,12 @@
-﻿using Anthill.Core;
 using FluentAssertions;
 using NSubstitute;
 using Nursery.Core;
 using Nursery.Core.Eggs.DTOs;
+using Reporters.Core.Reporters;
 using System.Collections.Generic;
 using Xunit;
 
-namespace AntHill.Tests
+namespace Reporters.Tests
 {
     public class EggsIncubatingReporterTests
     {

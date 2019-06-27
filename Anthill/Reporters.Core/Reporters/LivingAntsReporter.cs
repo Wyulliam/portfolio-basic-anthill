@@ -1,6 +1,6 @@
-﻿using System.Linq;
+using System.Linq;
 
-namespace Anthill.Core
+namespace Reporters.Core.Reporters
 {
     internal class LivingAntsReporter : IReporter
     {

@@ -1,20 +1,22 @@
-﻿using Anthill.Core;
+using Cemetery.Core;
+using Cemetery.Core.Corpses.DTOs;
 using FluentAssertions;
 using NSubstitute;
+using Reporters.Core.Reporters;
 using System.Collections.Generic;
 using Xunit;
 
-namespace AntHill.Tests
+namespace Reporters.Tests
 {
     public class DeadAntsReporterTests
     {
         private IReporter _reporter;
-        private ICemeteryRepository _cemeteryRepository;
+        private ICemetery _cemetery;
 
         public DeadAntsReporterTests()
         {
-            _cemeteryRepository = Substitute.For<ICemeteryRepository>();
-            _reporter = new DeadAntsReporter(_cemeteryRepository);
+            _cemetery = Substitute.For<ICemetery>();
+            _reporter = new DeadAntsReporter(_cemetery);
         }
 
         [Fact]
@@ -22,13 +24,13 @@ namespace AntHill.Tests
         {
             _reporter.Report();
 
-            _cemeteryRepository.Received(1).GetCorpses();
+            _cemetery.Received(1).GetCorpses();
         }
 
         [Fact]
         public void should_report_how_many_ants_are_dead()
         {
-            _cemeteryRepository.GetCorpses().Returns(new List<CorpsesDTO>() { new CorpsesDTO(5, "Warrior"), new CorpsesDTO(10, "Workers") });
+            _cemetery.GetCorpses().Returns(new List<CorpsesDTO>() { new CorpsesDTO(5, "Warrior"), new CorpsesDTO(10, "Workers") });
 
             var report = _reporter.Report();
 

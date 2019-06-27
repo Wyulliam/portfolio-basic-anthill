@@ -1,14 +1,15 @@
-﻿using System.Linq;
+using Cemetery.Core;
+using System.Linq;
 
-namespace Anthill.Core
+namespace Reporters.Core.Reporters
 {
     internal class DeadAntsReporter : IReporter
     {
-        private ICemeteryRepository _cemeteryRepository;
+        private ICemetery _cemeteryRepository;
 
-        public DeadAntsReporter(ICemeteryRepository cemeteryRepository)
+        public DeadAntsReporter(ICemetery cemetery)
         {
-            _cemeteryRepository = cemeteryRepository;
+            _cemeteryRepository = cemetery;
         }
 
         public string Report()

@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+using Reporters.Core.Reporters;
+using System.Collections.Generic;
 using System.Text;
 
-namespace Anthill.Core
+namespace Reporters.Core
 {
     class DefaultStatusReporter : IStatusReporter
     {

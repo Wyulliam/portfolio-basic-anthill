@@ -1,7 +1,7 @@
-﻿using Nursery.Core;
+using Nursery.Core;
 using System.Linq;
 
-namespace Anthill.Core
+namespace Reporters.Core.Reporters
 {
     internal class EggsIncubatingReporter : IReporter
     {

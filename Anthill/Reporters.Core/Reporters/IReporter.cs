@@ -1,4 +1,4 @@
-﻿namespace Anthill.Core
+namespace Reporters.Core.Reporters
 {
     internal interface IReporter
     {

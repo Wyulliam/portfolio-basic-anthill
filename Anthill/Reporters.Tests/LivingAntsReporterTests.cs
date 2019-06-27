@@ -1,10 +1,10 @@
-﻿using Anthill.Core;
 using FluentAssertions;
 using NSubstitute;
+using Reporters.Core.Reporters;
 using System.Collections.Generic;
 using Xunit;
 
-namespace AntHill.Tests
+namespace Reporters.Tests
 {
     public class LivingAntsReporterTests
     {

@@ -1,4 +1,5 @@
 using Nursery.Core.AntTypes.DTOs;
+using Nursery.Core.AntTypes.Entities;
 using Nursery.Core.Repositories;
 
 namespace Nursery.Core.AntTypes.Creators
@@ -14,9 +15,7 @@ namespace Nursery.Core.AntTypes.Creators
 
         public void Create(string type)
         {
-            var typeDTO = new AntTypeDTO(type);
-
-            _repository.Create(typeDTO);
+            _repository.Create(new AntType(type));
         }
     }
 }

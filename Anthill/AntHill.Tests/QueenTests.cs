@@ -41,7 +41,7 @@ namespace AntHill.Tests
         {
             _queen.LayEggs(5, "Warrior");
 
-            _nursery.Received(1).IncubateEggs(5, "Warrior");
+            _nursery.Received(1).IncubateEggs("Warrior", 5);
         }
 
         [Fact]

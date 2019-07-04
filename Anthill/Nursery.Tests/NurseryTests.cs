@@ -2,12 +2,13 @@
 using Nursery.Core;
 using Nursery.Core.AntTypes.Creators;
 using Nursery.Core.AntTypes.Getters;
+using Nursery.Core.Eggs.DTOs;
 using Nursery.Core.Eggs.Generators;
 using Nursery.Core.Eggs.Getters;
 using Nursery.Core.Factory;
 using Xunit;
 
-namespace AntHill.Tests
+namespace Nursery.Tests
 {
     public class NurseryTests
     {
@@ -38,9 +39,10 @@ namespace AntHill.Tests
         [Fact]
         public void should_generate_eggs_when_incubating()
         {
-            _nursery.IncubateEggs(5, "Warrior");
+            _nursery.IncubateEggs("Warrior", 5);
 
-            _eggGenerator.Received(1).Generate(5, "Warrior");
+            _eggGenerator.Received(1).Generate(
+                Arg.Is<EggsDTO>(a => a.Type == "Warrior" && a.Quantity == 5));
         }
 
         [Fact]

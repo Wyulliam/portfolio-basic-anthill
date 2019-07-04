@@ -1,5 +1,6 @@
 using Nursery.Core.Eggs.DTOs;
 using Nursery.Core.Repositories;
+using System;
 
 namespace Nursery.Core.Eggs.Generators
 {
@@ -11,12 +12,11 @@ namespace Nursery.Core.Eggs.Generators
         {
             _repository = repository;
         }
-
-        public void Generate(int quantity, string type)
+        
+        public void Generate(EggsDTO eggs)
         {
-            var eggs = new EggsDTO(quantity, type);
-
-            _repository.Create(eggs);
+            _repository.Create(
+                new Entities.Eggs(eggs.Type, eggs.Quantity, DateTime.Now.AddSeconds(10)));
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Anthill.Core
 
         public string LayEggs(int quantity, string type)
         {
-            _nursery.IncubateEggs(quantity, type);
+            _nursery.IncubateEggs(type, quantity);
 
             return $"Layed {quantity} {type} ant eggs";
         }

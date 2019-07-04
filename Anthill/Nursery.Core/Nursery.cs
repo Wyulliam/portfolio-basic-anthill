@@ -39,9 +39,9 @@ namespace Nursery.Core
             return _eggGetter.Get();
         }
 
-        public void IncubateEggs(int quantity, string type)
+        public void IncubateEggs(string type, int quantity)
         {
-            _eggGenerator.Generate(quantity, type);
+            _eggGenerator.Generate(new EggsDTO(type, quantity));
         }
     }
 }

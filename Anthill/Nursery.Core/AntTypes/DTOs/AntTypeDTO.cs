@@ -1,3 +1,7 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace Nursery.Core.AntTypes.DTOs
 {
     public class AntTypeDTO
@@ -7,6 +11,6 @@ namespace Nursery.Core.AntTypes.DTOs
             Type = type;
         }
 
-        public string Type { get; }
+        public string Type { get; private set; }
     }
 }

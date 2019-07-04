@@ -1,23 +1,27 @@
-﻿using System.Collections.Generic;
-using Nursery.Core.Eggs.DTOs;
+﻿using Nursery.Core.Eggs.Entities;
 using Nursery.Core.Repositories;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Nursery.Data.Repositories
 {
     class EggRepository : IEggRepository
     {
-        public void Create(EggsDTO eggs)
+        public void Create(Eggs eggs)
         {
-            
+            using (var context = new NurseryContext())
+            {
+                context.Eggs.Add(eggs);
+                context.SaveChanges();
+            }
         }
 
-        public IReadOnlyCollection<EggsDTO> Get()
+        public IReadOnlyCollection<Eggs> Get()
         {
-            return new List<EggsDTO>()
+            using(var context = new NurseryContext())
             {
-                new EggsDTO(7, "Warrior"),
-                new EggsDTO(4, "Workers")
-            };
+                return context.Eggs.ToList();
+            }
         }
     }
 }

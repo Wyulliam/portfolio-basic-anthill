@@ -7,7 +7,7 @@ using Nursery.Core.Factory;
 using Nursery.Core.Repositories;
 using Xunit;
 
-namespace AntHill.Tests
+namespace Nursery.Tests
 {
     public class NurseryAbstractFactoryTests
     {

@@ -1,6 +1,7 @@
 using NSubstitute;
 using Nursery.Core.AntTypes.Creators;
 using Nursery.Core.AntTypes.DTOs;
+using Nursery.Core.AntTypes.Entities;
 using Nursery.Core.Repositories;
 using Xunit;
 
@@ -22,7 +23,7 @@ namespace Nursery.Tests
         {
             _creator.Create("Warrior");
 
-            _repository.Received(1).Create(Arg.Is<AntTypeDTO>(a => a.Type == "Warrior"));
+            _repository.Received(1).Create(Arg.Is<AntType>(a => a.Type == "Warrior"));
         } 
     }
 }

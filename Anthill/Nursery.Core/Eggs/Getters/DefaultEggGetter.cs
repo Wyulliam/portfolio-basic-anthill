@@ -1,6 +1,7 @@
 using Nursery.Core.Eggs.DTOs;
 using Nursery.Core.Repositories;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Nursery.Core.Eggs.Getters
 {
@@ -15,7 +16,7 @@ namespace Nursery.Core.Eggs.Getters
 
         public IReadOnlyCollection<EggsDTO> Get()
         {
-            return _repository.Get();
+            return _repository.Get().Select(s => new EggsDTO(s.Type, s.Quantity)).ToList();
         }
     }
 }

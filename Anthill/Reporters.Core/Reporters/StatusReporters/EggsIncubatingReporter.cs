@@ -7,9 +7,9 @@ namespace Reporters.Core.Reporters.StatusReporters
     {
         private INursery _nursery;
 
-        public EggsIncubatingReporter(INursery nurseryRepository)
+        public EggsIncubatingReporter(INursery nursery)
         {
-            _nursery = nurseryRepository;
+            _nursery = nursery;
         }
 
         public override string Report()

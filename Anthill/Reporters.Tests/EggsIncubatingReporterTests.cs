@@ -30,7 +30,7 @@ namespace Reporters.Tests
         [Fact]
         public void should_report_how_many_eggs_are_incubating()
         {
-            _nursery.GetEggs().Returns(new List<EggsDTO>() { new EggsDTO(5, "Warrior"), new EggsDTO(10, "Worker") });
+            _nursery.GetEggs().Returns(new List<EggsDTO>() { new EggsDTO("Warrior", 5), new EggsDTO("Worker", 10) });
 
             var report = _reporter.Report();
 

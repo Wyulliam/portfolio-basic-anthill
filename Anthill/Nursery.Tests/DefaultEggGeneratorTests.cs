@@ -1,5 +1,6 @@
 using NSubstitute;
 using Nursery.Core.Eggs.DTOs;
+using Nursery.Core.Eggs.Entities;
 using Nursery.Core.Eggs.Generators;
 using Nursery.Core.Repositories;
 using Xunit;
@@ -20,9 +21,9 @@ namespace Nursery.Tests
         [Fact]
         public void should_generate_eggs()
         {
-            _eggGenerator.Generate(5, "Warrior");
+            _eggGenerator.Generate(new EggsDTO("Warrior", 5));
 
-            _repository.Received(1).Create(Arg.Is<EggsDTO>(a => a.Quantity == 5 && a.Type == "Warrior"));
+            _repository.Received(1).Create(Arg.Is<Eggs>(a => a.Quantity == 5 && a.Type == "Warrior"));
         }
     }
 }

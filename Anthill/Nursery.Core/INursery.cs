@@ -6,7 +6,7 @@ namespace Nursery.Core
 {
     public interface INursery
     {
-        void IncubateEggs(int quantity, string type);
+        void IncubateEggs(string type, int quantity);
         void CreateType(string type);
         IReadOnlyCollection<AntTypeDTO> GetAntTypes();
         IReadOnlyCollection<EggsDTO> GetEggs();

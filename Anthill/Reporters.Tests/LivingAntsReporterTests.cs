@@ -30,7 +30,7 @@ namespace Reporters.Tests
         [Fact]
         public void should_report_how_many_ants_are_alive()
         {
-            _colony.GetAnts().Returns(new List<AntsDTO>() { new AntsDTO(5, "Warrior"), new AntsDTO(10, "Workers") });
+            _colony.GetAnts().Returns(new List<AntsDTO>() { new AntsDTO("Warrior", 5), new AntsDTO("Workers", 10) });
 
             var report = _reporter.Report();
 

@@ -20,9 +20,7 @@ namespace Nursery.Data.Repositories
         public IReadOnlyCollection<AntType> Get()
         {
             using (var context = new NurseryContext())
-            {
                 return context.AntTypes.ToList();
-            }
         }
     }
 }

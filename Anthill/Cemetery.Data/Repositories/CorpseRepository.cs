@@ -10,9 +10,7 @@ namespace Cemetery.Data.Repositories
         public IReadOnlyCollection<Corpses> Get()
         {
             using (var context = new CemeteryContext())
-            {
                 return context.Corpses.ToList();
-            }
         }
     }
 }

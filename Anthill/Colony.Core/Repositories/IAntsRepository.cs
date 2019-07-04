@@ -5,6 +5,6 @@ namespace Colony.Core.Repositories
 {
     interface IAntsRepository
     {
-        IReadOnlyCollection<AntsDTO> Get();
+        IReadOnlyCollection<Ants.Entities.Ants> Get();
     }
 }

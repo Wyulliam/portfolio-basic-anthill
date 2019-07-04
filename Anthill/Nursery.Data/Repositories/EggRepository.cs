@@ -19,9 +19,7 @@ namespace Nursery.Data.Repositories
         public IReadOnlyCollection<Eggs> Get()
         {
             using(var context = new NurseryContext())
-            {
                 return context.Eggs.ToList();
-            }
         }
     }
 }

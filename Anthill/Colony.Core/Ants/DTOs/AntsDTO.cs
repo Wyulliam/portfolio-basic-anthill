@@ -2,14 +2,14 @@ namespace Colony.Core.Ants.DTOs
 {
     public class AntsDTO
     {
-        public AntsDTO(int quantity, string type)
+        public AntsDTO(string type, int quantity)
         {
-            Quantity = quantity;
             Type = type;
+            Quantity = quantity;
         }
 
-        public int Quantity { get; }
         public string Type { get; }
+        public int Quantity { get; }
 
         public override string ToString()
         {

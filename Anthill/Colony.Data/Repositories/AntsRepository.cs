@@ -1,18 +1,17 @@
 ﻿using Colony.Core.Ants.DTOs;
+using Colony.Core.Ants.Entities;
 using Colony.Core.Repositories;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Colony.Data.Repositories
 {
     class AntsRepository : IAntsRepository
     {
-        public IReadOnlyCollection<AntsDTO> Get()
+        public IReadOnlyCollection<Ants> Get()
         {
-            return new List<AntsDTO>()
-            {
-                new AntsDTO(7, "Warrior"),
-                new AntsDTO(4, "Workers")
-            };
+            using(var context = new ColonyContext())
+                return context.Ants.ToList();
         }
     }
 }

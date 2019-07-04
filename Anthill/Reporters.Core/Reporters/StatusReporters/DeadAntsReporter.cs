@@ -18,6 +18,9 @@ namespace Reporters.Core.Reporters.StatusReporters
 
             var cemeteryReport = string.Join("; ", corpses.Select(s => s.ToString()));
 
+            if (string.IsNullOrWhiteSpace(cemeteryReport))
+                cemeteryReport = "There are no dead ants";
+
             return $"Dead Ants: {cemeteryReport}";
         }
     }

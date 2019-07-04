@@ -18,6 +18,9 @@ namespace Reporters.Core.Reporters.StatusReporters
 
             var eggsReport =  string.Join("; ", eggs.Select(s => s.ToString()));
 
+            if (string.IsNullOrWhiteSpace(eggsReport))
+                eggsReport = "There are no eggs incubating";
+
             return $"Eggs Incubating: {eggsReport}";
         }
     }

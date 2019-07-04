@@ -18,6 +18,9 @@ namespace Reporters.Core.Reporters.StatusReporters
 
             var livingAntsReport = string.Join("; ", ants.Select(s => s.ToString()));
 
+            if (string.IsNullOrWhiteSpace(livingAntsReport))
+                livingAntsReport = "There are no ants in the colony";
+
             return $"Living Ants: {livingAntsReport}";
         }
     }

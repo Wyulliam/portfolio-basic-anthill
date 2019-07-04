@@ -1,6 +1,7 @@
 using Cemetery.Core.Corpses.DTOs;
 using Cemetery.Core.Repositories;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Cemetery.Core.Corpses.Getters
 {
@@ -15,7 +16,7 @@ namespace Cemetery.Core.Corpses.Getters
 
         public IReadOnlyCollection<CorpsesDTO> Get()
         {
-            return _repository.Get();
+            return _repository.Get().Select(s => new CorpsesDTO(s.Type, s.Quantity)).ToList();
         }
     }
 }

@@ -2,14 +2,14 @@ namespace Cemetery.Core.Corpses.DTOs
 {
     public class CorpsesDTO
     {
-        public CorpsesDTO(int quantity, string type)
+        public CorpsesDTO(string type, int quantity)
         {
-            Quantity = quantity;
             Type = type;
+            Quantity = quantity;
         }
 
-        public int Quantity { get; }
         public string Type { get; }
+        public int Quantity { get; }
 
         public override string ToString()
         {

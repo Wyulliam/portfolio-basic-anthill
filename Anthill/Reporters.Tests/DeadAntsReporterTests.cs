@@ -30,7 +30,7 @@ namespace Reporters.Tests
         [Fact]
         public void should_report_how_many_ants_are_dead()
         {
-            _cemetery.GetCorpses().Returns(new List<CorpsesDTO>() { new CorpsesDTO(5, "Warrior"), new CorpsesDTO(10, "Workers") });
+            _cemetery.GetCorpses().Returns(new List<CorpsesDTO>() { new CorpsesDTO("Warrior", 5), new CorpsesDTO("Workers", 10) });
 
             var report = _reporter.Report();
 

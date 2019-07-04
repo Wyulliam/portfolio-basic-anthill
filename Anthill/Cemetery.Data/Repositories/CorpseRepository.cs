@@ -1,19 +1,18 @@
-﻿using Cemetery.Core.Corpses.DTOs;
+﻿using Cemetery.Core.Corpses.Entities;
 using Cemetery.Core.Repositories;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Cemetery.Data.Repositories
 {
     class CorpseRepository : ICorpseRepository
     {
-        public IReadOnlyCollection<CorpsesDTO> Get()
+        public IReadOnlyCollection<Corpses> Get()
         {
-            return new List<CorpsesDTO>()
+            using (var context = new CemeteryContext())
             {
-                new CorpsesDTO(5, "Warrior"),
-                new CorpsesDTO(12, "Workers")
-            };
+                return context.Corpses.ToList();
+            }
         }
     }
 }

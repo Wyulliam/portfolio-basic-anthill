@@ -5,23 +5,22 @@ using Nursery.Core.AntTypes.Getters;
 using Nursery.Core.Eggs.DTOs;
 using Nursery.Core.Eggs.Generators;
 using Nursery.Core.Eggs.Getters;
+using Nursery.Core.Eggs.Incubator;
 using Nursery.Core.Factory;
 
 namespace Nursery.Core
 {
     class Nursery : INursery
     {
-        private readonly IEggGenerator _eggGenerator;
-        private readonly IEggGetter _eggGetter;
+        private readonly IIncubator _incubator;
         private readonly IAntTypeCreator _typeCreator;
         private readonly IAntTypeGetter _antTypeGetter;
 
         public Nursery(INurseryAbstractFactory factory)
         {
+            _incubator = factory.BuildIncubator();
             _antTypeGetter = factory.BuildAntTypeGetter();
             _typeCreator = factory.BuildAntTypeCreator();
-            _eggGenerator = factory.BuildEggGenerator();
-            _eggGetter = factory.BuildEggGetter();
         }
 
         public void CreateType(string type)
@@ -36,12 +35,12 @@ namespace Nursery.Core
 
         public IReadOnlyCollection<EggsDTO> GetEggs()
         {
-            return _eggGetter.Get();
+            return _incubator.GetEggs();
         }
 
         public void IncubateEggs(string type, int quantity)
         {
-            _eggGenerator.Generate(new EggsDTO(type, quantity));
+            //_incubator.Incubate(new EggsDTO(type, quantity));
         }
     }
 }

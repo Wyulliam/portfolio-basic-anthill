@@ -16,7 +16,6 @@ namespace Colony.Core.Ants.Getters
 
         public IReadOnlyCollection<AntsDTO> Get()
         {
-            var x = _repository.Get();
             return _repository.Get().Select(s => new AntsDTO(s.Type, s.Quantity)).ToList();
         }
     }

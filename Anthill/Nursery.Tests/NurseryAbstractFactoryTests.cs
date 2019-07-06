@@ -1,8 +1,10 @@
-﻿using Nursery.Core;
+﻿using MediatR;
+using Nursery.Core;
 using Nursery.Core.AntTypes.Creators;
 using Nursery.Core.AntTypes.Getters;
 using Nursery.Core.Eggs.Generators;
 using Nursery.Core.Eggs.Getters;
+using Nursery.Core.Eggs.Incubator;
 using Nursery.Core.Factory;
 using Nursery.Core.Repositories;
 using Xunit;
@@ -14,10 +16,11 @@ namespace Nursery.Tests
         private INurseryAbstractFactory _factory;
         private IAntTypeRepository _antTypeRepository;
         private IEggRepository _eggRepository;
+        private IMediator _mediator;
 
         public NurseryAbstractFactoryTests()
         {
-            _factory = new NurseryAbstractFactory(_antTypeRepository, _eggRepository);
+            _factory = new NurseryAbstractFactory(_antTypeRepository, _eggRepository, _mediator);
         }
 
         [Fact]
@@ -37,19 +40,11 @@ namespace Nursery.Tests
         }
 
         [Fact]
-        public void should_build_an_egg_generator()
+        public void should_build_an_incubator()
         {
-            var eggGenerator = _factory.BuildEggGenerator();
+            var incubator = _factory.BuildIncubator();
 
-            Assert.True(eggGenerator is IEggGenerator);
-        }
-
-        [Fact]
-        public void should_build_an_egg_getter()
-        {
-            var eggGetter = _factory.BuildEggGetter();
-
-            Assert.True(eggGetter is IEggGetter);
+            Assert.True(incubator is IIncubator);
         }
     }
 }

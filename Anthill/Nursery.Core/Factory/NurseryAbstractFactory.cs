@@ -1,7 +1,9 @@
+using MediatR;
 using Nursery.Core.AntTypes.Creators;
 using Nursery.Core.AntTypes.Getters;
 using Nursery.Core.Eggs.Generators;
 using Nursery.Core.Eggs.Getters;
+using Nursery.Core.Eggs.Incubator;
 using Nursery.Core.Repositories;
 
 namespace Nursery.Core.Factory
@@ -10,9 +12,11 @@ namespace Nursery.Core.Factory
     {
         private IAntTypeRepository _antTypeRepository;
         private IEggRepository _eggRepository;
+        private IMediator _mediator;
 
-        public NurseryAbstractFactory(IAntTypeRepository repository, IEggRepository eggRepository)
+        public NurseryAbstractFactory(IAntTypeRepository repository, IEggRepository eggRepository, IMediator mediator)
         {
+            _mediator = mediator;
             _eggRepository = eggRepository;
             _antTypeRepository = repository;
         }
@@ -27,12 +31,21 @@ namespace Nursery.Core.Factory
             return new DefaultAntTypeGetter(_antTypeRepository);
         }
 
-        public IEggGenerator BuildEggGenerator()
+        public IIncubator BuildIncubator()
+        {
+            return new DefaultIncubator(
+                BuildEggGenerator(),
+                BuildEggGetter(),
+                _mediator
+                );
+        }
+
+        private IEggGenerator BuildEggGenerator()
         {
             return new DefaultEggGenerator(_eggRepository);
         }
 
-        public IEggGetter BuildEggGetter()
+        private IEggGetter BuildEggGetter()
         {
             return new DefaultEggGetter(_eggRepository);
         }

@@ -13,10 +13,10 @@ namespace Nursery.Core.Eggs.Generators
             _repository = repository;
         }
         
-        public void Generate(EggsDTO eggs)
+        public void Generate(EggsDTO eggs, DateTime dueDate)
         {
             _repository.Create(
-                new Entities.Eggs(eggs.Type, eggs.Quantity, DateTime.Now.AddSeconds(10)));
+                new Entities.Eggs(eggs.Type, eggs.Quantity, dueDate));
         }
     }
 }

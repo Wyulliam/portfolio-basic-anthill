@@ -5,6 +5,7 @@ using Nursery.Core.AntTypes.Getters;
 using Nursery.Core.Eggs.DTOs;
 using Nursery.Core.Eggs.Generators;
 using Nursery.Core.Eggs.Getters;
+using Nursery.Core.Eggs.Incubator;
 using Nursery.Core.Factory;
 using Xunit;
 
@@ -13,8 +14,7 @@ namespace Nursery.Tests
     public class NurseryTests
     {
         private INursery _nursery;
-        private IEggGenerator _eggGenerator;
-        private IEggGetter _eggGetter;
+        private IIncubator _incubator;
         private IAntTypeCreator _typeCreator;
         private IAntTypeGetter _typeGetter;
 
@@ -22,18 +22,16 @@ namespace Nursery.Tests
 
         public NurseryTests()
         {
-            _eggGetter = Substitute.For<IEggGetter>();
-            _eggGenerator = Substitute.For<IEggGenerator>();
+            _incubator = Substitute.For<IIncubator>();
             _typeCreator = Substitute.For<IAntTypeCreator>();
             _typeGetter = Substitute.For<IAntTypeGetter>();
 
             _factory = Substitute.For<INurseryAbstractFactory>();
-            _factory.BuildEggGetter().Returns(_eggGetter);
-            _factory.BuildEggGenerator().Returns(_eggGenerator);
             _factory.BuildAntTypeCreator().Returns(_typeCreator);
             _factory.BuildAntTypeGetter().Returns(_typeGetter);
+            _factory.BuildIncubator().Returns(_incubator);
 
-            _nursery = new Nursery.Core.Nursery(_factory);
+            _nursery = new Core.Nursery(_factory);
         }
 
         [Fact]
@@ -41,8 +39,8 @@ namespace Nursery.Tests
         {
             _nursery.IncubateEggs("Warrior", 5);
 
-            _eggGenerator.Received(1).Generate(
-                Arg.Is<EggsDTO>(a => a.Type == "Warrior" && a.Quantity == 5));
+            // _incubator.Received(1).Incubate(
+              //  Arg.Is<EggsDTO>(a => a.Type == "Warrior" && a.Quantity == 5));
         }
 
         [Fact]
@@ -66,7 +64,7 @@ namespace Nursery.Tests
         {
             _nursery.GetEggs();
 
-            _eggGetter.Received(1).Get();
+            _incubator.Received(1).GetEggs();
         }
     }
 }

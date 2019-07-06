@@ -1,6 +1,7 @@
 ﻿using Anthill.Core;
 using Cemetery.Startup;
 using Colony.Startup;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Nursery.Startup;

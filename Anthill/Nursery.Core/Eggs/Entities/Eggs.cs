@@ -6,15 +6,15 @@ namespace Nursery.Core.Eggs.Entities
     {
         protected Eggs(){}
 
-        public Eggs(string type, int quantity, DateTime dueDate)
+        public Eggs(string type, int quantity, DateTime generatedDate)
         {
             Type = type;
             Quantity = quantity;
-            DueDate = dueDate;
+            GeneratedDate = generatedDate;
         }
         public Guid Id { get; protected set; }
         public string Type { get; protected set; }
         public int Quantity { get; protected set; }
-        public DateTime DueDate { get; protected set; }
+        public DateTime GeneratedDate { get; protected set; }
     }
 }

@@ -1,7 +1,6 @@
 # WORK IN PROGRESS
 Before going thru this project, keep in mind that it is in progress. 
 This are the main things that are **waiting to be developed**:
-- **Use of Entity framework**: the repositories are fake right now
 - **Integration Tests**: test the application after Entity Framework
 - **Life and death of ants**: after being born, ants are supposed to die after a while
 
@@ -20,6 +19,12 @@ These topics are not present in this project. They will have their own project i
 
 ## .NET Core
 .NET Core because you, the reader, may not be using Windows OS.
+
+## Entity Framework
+Used to create a code-first application. This way, we can generate the database based on our entities. It is responsible to create, read, update and delete code without using raw SQL commands. 
+
+With entity framework, I'm using a simple SQLite database, since there is no need, in this project, for a SQL Server database or similar.
+Entity Framework is a good call because we can change the SQLite database for an SQL Server, for example, and we would only change the connection string in the Context classes.
 
 ## TDD
 Using Test Driven Development on your project will not only make it less susceptible to bugs, it will increase your productivity and make your code way more clean. In this project, my approach was to create the Queen's implementation, and start unit testing its functions, using interfaces that were not even implemented. This way, I can guarantee that the Queen's implementation is working the way it is supposed to work. After that, I implemented the next interface, and started unit testing it the same way, and so it goes.
@@ -52,3 +57,4 @@ Using the Repository Pattern, we can make our code persistence ignorant. It does
 - [Dependency Injection](https://www.infoworld.com/article/2974298/exploring-the-dependency-injection-principle.html)
 - [Using Abstract Factories](https://sourcemaking.com/design_patterns/abstract_factory)
 - [Using Repository Pattern](https://deviq.com/repository-pattern/)
+- [More about Entity Framework](https://www.itprotoday.com/development-techniques-and-management/5-reasons-why-entity-framework-can-be-your-best-friend)

@@ -13,17 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nursery.Tests", "Nursery.Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nursery.Data", "Nursery.Data\Nursery.Data.csproj", "{1815BCE7-DBF4-4253-93D2-870CECB22904}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reporters.Core", "Reporters.Core\Reporters.Core.csproj", "{CAAD7387-D3A6-4EB1-A46A-BC0416FE81DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reporters.Core", "Reporters.Core\Reporters.Core.csproj", "{CAAD7387-D3A6-4EB1-A46A-BC0416FE81DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reporters.Tests", "Reporters.Tests\Reporters.Tests.csproj", "{EF1BD6A2-518C-4BB8-A5F1-ED18838814F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reporters.Tests", "Reporters.Tests\Reporters.Tests.csproj", "{EF1BD6A2-518C-4BB8-A5F1-ED18838814F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cemetery.Core", "Cemetery.Core\Cemetery.Core.csproj", "{3434CB42-207D-44C6-A7DA-94F8F0F3FA87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cemetery.Core", "Cemetery.Core\Cemetery.Core.csproj", "{3434CB42-207D-44C6-A7DA-94F8F0F3FA87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cemetery.Tests", "Cemetery.Tests\Cemetery.Tests.csproj", "{938FD306-6995-42A8-AAFB-5119884F85E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cemetery.Tests", "Cemetery.Tests\Cemetery.Tests.csproj", "{938FD306-6995-42A8-AAFB-5119884F85E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colony.Core", "Colony.Core\Colony.Core.csproj", "{A79B6183-C5AA-4DD9-B4B1-D93CF81923D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colony.Core", "Colony.Core\Colony.Core.csproj", "{A79B6183-C5AA-4DD9-B4B1-D93CF81923D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colony.Tests", "Colony.Tests\Colony.Tests.csproj", "{44907022-0C27-4389-A028-065FE7146924}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colony.Tests", "Colony.Tests\Colony.Tests.csproj", "{44907022-0C27-4389-A028-065FE7146924}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Anthill", "Anthill", "{2AB8408D-A312-4CBB-8D18-594CBF97859D}"
 EndProject
@@ -35,21 +35,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nursery", "Nursery", "{1356
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reporters", "Reporters", "{5140B8C3-E818-4267-AD21-4B2251B2977C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colony.Data", "Colony.Data\Colony.Data.csproj", "{66533C74-5520-4BB3-B5A8-3D00802B02EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colony.Data", "Colony.Data\Colony.Data.csproj", "{66533C74-5520-4BB3-B5A8-3D00802B02EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cemetery.Data", "Cemetery.Data\Cemetery.Data.csproj", "{87210A6C-D6A3-4063-93FD-A07F2374FE9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cemetery.Data", "Cemetery.Data\Cemetery.Data.csproj", "{87210A6C-D6A3-4063-93FD-A07F2374FE9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anthill.Service", "Anthill.Service\Anthill.Service.csproj", "{AD5EB236-9402-4E99-9391-74D08B97BB5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anthill.Service", "Anthill.Service\Anthill.Service.csproj", "{AD5EB236-9402-4E99-9391-74D08B97BB5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anthill.Startup", "Anthill.Startup\Anthill.Startup.csproj", "{932D8A05-1A34-4873-A926-A136DA5C2836}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anthill.Startup", "Anthill.Startup\Anthill.Startup.csproj", "{932D8A05-1A34-4873-A926-A136DA5C2836}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colony.Startup", "Colony.Startup\Colony.Startup.csproj", "{667258E9-1E86-40DD-B63E-ED8638A74CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colony.Startup", "Colony.Startup\Colony.Startup.csproj", "{667258E9-1E86-40DD-B63E-ED8638A74CFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reporters.Startup", "Reporters.Startup\Reporters.Startup.csproj", "{5ED437E0-423F-4214-8CB4-74F9DAF272C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reporters.Startup", "Reporters.Startup\Reporters.Startup.csproj", "{5ED437E0-423F-4214-8CB4-74F9DAF272C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nursery.Startup", "Nursery.Startup\Nursery.Startup.csproj", "{3CE7CA1C-3682-44AB-956C-DE8CFE3ECB4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nursery.Startup", "Nursery.Startup\Nursery.Startup.csproj", "{3CE7CA1C-3682-44AB-956C-DE8CFE3ECB4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cemetery.Startup", "Cemetery.Startup\Cemetery.Startup.csproj", "{4E152A47-0B6F-4FB1-9610-D490A2203884}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cemetery.Startup", "Cemetery.Startup\Cemetery.Startup.csproj", "{4E152A47-0B6F-4FB1-9610-D490A2203884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nursery.Requests", "Nursery.Requests\Nursery.Requests.csproj", "{5D5F0FF7-D8FC-4F81-AC2C-11A1FF1C5A83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,10 @@ Global
 		{4E152A47-0B6F-4FB1-9610-D490A2203884}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E152A47-0B6F-4FB1-9610-D490A2203884}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E152A47-0B6F-4FB1-9610-D490A2203884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5F0FF7-D8FC-4F81-AC2C-11A1FF1C5A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5F0FF7-D8FC-4F81-AC2C-11A1FF1C5A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5F0FF7-D8FC-4F81-AC2C-11A1FF1C5A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5F0FF7-D8FC-4F81-AC2C-11A1FF1C5A83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -157,6 +163,7 @@ Global
 		{5ED437E0-423F-4214-8CB4-74F9DAF272C1} = {5140B8C3-E818-4267-AD21-4B2251B2977C}
 		{3CE7CA1C-3682-44AB-956C-DE8CFE3ECB4F} = {1356BF3E-2031-4816-B19E-F396BBCE1309}
 		{4E152A47-0B6F-4FB1-9610-D490A2203884} = {8EFF854B-84DC-41E5-94E4-31D77C9AA994}
+		{5D5F0FF7-D8FC-4F81-AC2C-11A1FF1C5A83} = {1356BF3E-2031-4816-B19E-F396BBCE1309}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB73E512-D1B5-4DBE-8D37-ADAD6413C382}

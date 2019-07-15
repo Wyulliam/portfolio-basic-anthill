@@ -1,26 +1,26 @@
-using System.Collections.Generic;
+using MediatR;
 using Nursery.Core.AntTypes.Creators;
 using Nursery.Core.AntTypes.DTOs;
 using Nursery.Core.AntTypes.Getters;
 using Nursery.Core.Eggs.DTOs;
-using Nursery.Core.Eggs.Generators;
-using Nursery.Core.Eggs.Getters;
-using Nursery.Core.Eggs.Incubator;
 using Nursery.Core.Factory;
+using Nursery.Requests;
+using System.Collections.Generic;
 
 namespace Nursery.Core
 {
     class Nursery : INursery
     {
-        private readonly IIncubator _incubator;
         private readonly IAntTypeCreator _typeCreator;
         private readonly IAntTypeGetter _antTypeGetter;
+        private readonly IMediator _mediator;
 
-        public Nursery(INurseryAbstractFactory factory)
+        public Nursery(INurseryAbstractFactory factory, IMediator mediator)
         {
-            _incubator = factory.BuildIncubator();
             _antTypeGetter = factory.BuildAntTypeGetter();
             _typeCreator = factory.BuildAntTypeCreator();
+
+            _mediator = mediator;
         }
 
         public void CreateType(string type)
@@ -35,12 +35,13 @@ namespace Nursery.Core
 
         public IReadOnlyCollection<EggsDTO> GetEggs()
         {
-            return _incubator.GetEggs();
+            return null;
+            //return _incubator.GetEggs();
         }
 
-        public void IncubateEggs(string type, int quantity)
+        public async void IncubateEggs(string type, int quantity)
         {
-            //_incubator.Incubate(new EggsDTO(type, quantity));
+            await _mediator.Send(new IncubationRequest(type, quantity));
         }
     }
 }

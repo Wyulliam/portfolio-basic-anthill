@@ -1,8 +1,8 @@
 ﻿using MediatR;
 
-namespace Nursery.Core.Eggs.Requests
+namespace Nursery.Requests
 {
-    class EggHatchedRequest : IRequest
+    public class EggHatchedRequest : IRequest
     {
         public EggHatchedRequest(string type, int quantity)
         {

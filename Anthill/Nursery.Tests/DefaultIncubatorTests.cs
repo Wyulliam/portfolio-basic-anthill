@@ -4,8 +4,7 @@ using NSubstitute;
 using Nursery.Core.Eggs.Generators;
 using Nursery.Core.Eggs.Getters;
 using Nursery.Core.Eggs.Incubator;
-using Nursery.Core.Eggs.Requests;
-using System.Threading;
+using Nursery.Requests;
 using Xunit;
 
 namespace Nursery.Tests
@@ -34,7 +33,7 @@ namespace Nursery.Tests
         [Fact]
         public void should_give_life_to_new_ants_after_incubating()
         {
-           _incubator.Handle(new IncubationRequest("Warrior", 5), new CancellationToken()).Wait();
+          _incubator.Incubate(new IncubationRequest("Warrior", 5)).Wait();
 
            _mediator.Received(1).Send(Arg.Is<EggHatchedRequest>(a => a.Type == "Warrior" && a.Quantity == 5));
         }

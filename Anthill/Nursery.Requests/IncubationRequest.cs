@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Nursery.Core.Eggs.Requests
+namespace Nursery.Requests
 {
     class IncubationRequest : IRequest
     {

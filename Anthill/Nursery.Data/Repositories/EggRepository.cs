@@ -22,4 +22,5 @@ namespace Nursery.Data.Repositories
                 return context.Eggs.ToList();
         }
     }
+
 }

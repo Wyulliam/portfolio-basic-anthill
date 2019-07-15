@@ -17,6 +17,7 @@ namespace Nursery.Startup
 
             services.AddScoped<INursery, Core.Nursery>();
             services.AddScoped<INurseryAbstractFactory, NurseryAbstractFactory>();
+            services.AddScoped<IIncubatorFactory, IncubatorFactory>();
 
             services.AddScoped<IAntTypeRepository, AntTypeRepository>();
             services.AddScoped<IEggRepository, EggRepository>();

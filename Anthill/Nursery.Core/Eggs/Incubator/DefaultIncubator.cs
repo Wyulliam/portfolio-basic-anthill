@@ -2,7 +2,7 @@
 using Nursery.Core.Eggs.DTOs;
 using Nursery.Core.Eggs.Generators;
 using Nursery.Core.Eggs.Getters;
-using Nursery.Core.Eggs.Requests;
+using Nursery.Requests;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -16,7 +16,7 @@ namespace Nursery.Core.Eggs.Incubator
         private readonly IEggGetter _eggGetter;
         private readonly IMediator _mediator;
 
-        public int SecondsToIncubate => 10;
+        public int SecondsToIncubate => 1;
 
         public DefaultIncubator(IEggGenerator eggGenerator, IEggGetter eggGetter, IMediator mediator)
         {
@@ -25,13 +25,7 @@ namespace Nursery.Core.Eggs.Incubator
             _mediator = mediator;
         }
 
-        public async Task<Unit> Handle(IncubationRequest request, CancellationToken cancellationToken)
-        {
-            await Incubate(request);
-            return Unit.Value;
-        }
-
-        private async Task Incubate(IncubationRequest eggs)
+        public async Task Incubate(IncubationRequest eggs)
         {
             await Task.Run(() =>
             {

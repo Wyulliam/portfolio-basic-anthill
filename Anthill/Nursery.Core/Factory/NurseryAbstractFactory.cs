@@ -10,15 +10,14 @@ namespace Nursery.Core.Factory
 {
     class NurseryAbstractFactory : INurseryAbstractFactory
     {
+        private IIncubatorFactory _incubatorFactory;
         private IAntTypeRepository _antTypeRepository;
-        private IEggRepository _eggRepository;
-        private IMediator _mediator;
 
-        public NurseryAbstractFactory(IAntTypeRepository repository, IEggRepository eggRepository, IMediator mediator)
+        public NurseryAbstractFactory(IAntTypeRepository repository, 
+            IIncubatorFactory incubatorFactory)
         {
-            _mediator = mediator;
-            _eggRepository = eggRepository;
             _antTypeRepository = repository;
+            _incubatorFactory = incubatorFactory;
         }
 
         public IAntTypeCreator BuildAntTypeCreator()
@@ -33,21 +32,7 @@ namespace Nursery.Core.Factory
 
         public IIncubator BuildIncubator()
         {
-            return new DefaultIncubator(
-                BuildEggGenerator(),
-                BuildEggGetter(),
-                _mediator
-                );
-        }
-
-        private IEggGenerator BuildEggGenerator()
-        {
-            return new DefaultEggGenerator(_eggRepository);
-        }
-
-        private IEggGetter BuildEggGetter()
-        {
-            return new DefaultEggGetter(_eggRepository);
+            return _incubatorFactory.Build();
         }
     }
 }

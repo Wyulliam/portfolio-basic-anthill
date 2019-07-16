@@ -2,7 +2,6 @@ using MediatR;
 using Nursery.Core.AntTypes.Creators;
 using Nursery.Core.AntTypes.DTOs;
 using Nursery.Core.AntTypes.Getters;
-using Nursery.Core.Eggs.DTOs;
 using Nursery.Core.Factory;
 using Nursery.Requests;
 using System.Collections.Generic;
@@ -31,12 +30,6 @@ namespace Nursery.Core
         public IReadOnlyCollection<AntTypeDTO> GetAntTypes()
         {
             return _antTypeGetter.Get();
-        }
-
-        public IReadOnlyCollection<EggsDTO> GetEggs()
-        {
-            return null;
-            //return _incubator.GetEggs();
         }
 
         public async void IncubateEggs(string type, int quantity)

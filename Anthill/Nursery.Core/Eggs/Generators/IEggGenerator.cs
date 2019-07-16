@@ -5,6 +5,6 @@ namespace Nursery.Core.Eggs.Generators
 {
     interface IEggGenerator
     {
-        void Generate(EggsDTO eggs, DateTime dueDate);
+        void Generate(EggsDTO eggs);
     }
 }

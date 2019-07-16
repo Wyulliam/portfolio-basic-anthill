@@ -4,7 +4,7 @@ using Nursery.Core.Factory;
 using Nursery.Core.Repositories;
 using Xunit;
 
-namespace Nursery.Tests
+namespace Nursery.Tests.Incubators
 {
     public class IncubatorFactoryTests
     {

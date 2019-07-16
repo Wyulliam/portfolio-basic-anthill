@@ -17,7 +17,6 @@ namespace Nursery.Tests
         private IAntTypeCreator _typeCreator;
         private IAntTypeGetter _typeGetter;
         private IMediator _mediator;
-
         private INurseryAbstractFactory _factory;
 
         public NurseryTests()
@@ -60,13 +59,6 @@ namespace Nursery.Tests
 
             _typeGetter.Received(1).Get();
         }
-
-        [Fact]
-        public void should_get_how_many_eggs_are_incubating()
-        {
-            _nursery.GetEggs();
-
-            _incubator.Received(1).GetEggs();
-        }
     }
+
 }

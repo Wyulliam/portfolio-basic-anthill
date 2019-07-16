@@ -1,7 +1,7 @@
 ﻿using Cemetery.Core;
 using Colony.Core;
 using NSubstitute;
-using Nursery.Core;
+using Nursery.Core.Eggs.Checker.Factory;
 using Reporters.Core.Factory;
 using Reporters.Core.Reporters.AnthillStatusReporter;
 using Xunit;
@@ -11,17 +11,14 @@ namespace Reporters.Tests
     public class ReporterAbstractClassTests
     {
         private IReporterAbstractFactory _factory;
-        private ICemetery _cemetery;
-        private IColony _colony;
-        private INursery _nursery;
 
         public ReporterAbstractClassTests()
         {
-            _cemetery = Substitute.For<ICemetery>();
-            _colony = Substitute.For<IColony>();
-            _nursery = Substitute.For<INursery>();
+            var cemetery = Substitute.For<ICemetery>();
+            var colony = Substitute.For<IColony>();
+            var eggsCheckerFactory = Substitute.For<IEggsCheckerFactory>();
 
-            _factory = new ReporterAbstractFactory(_cemetery, _nursery, _colony);
+            _factory = new ReporterAbstractFactory(cemetery, eggsCheckerFactory, colony);
         }
 
         [Fact]

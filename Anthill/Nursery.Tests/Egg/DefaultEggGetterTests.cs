@@ -4,7 +4,7 @@ using Nursery.Core.Eggs.Getters;
 using Nursery.Core.Repositories;
 using Xunit;
 
-namespace Nursery.Tests
+namespace Nursery.Tests.Egg
 {
     public class DefaultEggGetterTests
     {

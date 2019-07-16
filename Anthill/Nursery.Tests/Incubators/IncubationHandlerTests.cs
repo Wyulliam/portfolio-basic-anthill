@@ -7,7 +7,7 @@ using Nursery.Requests;
 using System.Threading;
 using Xunit;
 
-namespace Nursery.Tests
+namespace Nursery.Tests.Incubators
 {
     public class IncubationHandlerTests
     {

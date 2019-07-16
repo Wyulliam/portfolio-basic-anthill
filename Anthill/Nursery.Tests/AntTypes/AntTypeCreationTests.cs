@@ -5,7 +5,7 @@ using Nursery.Core.AntTypes.Entities;
 using Nursery.Core.Repositories;
 using Xunit;
 
-namespace Nursery.Tests
+namespace Nursery.Tests.AntTypes
 {
     public class AntTypeCreationTests
     {

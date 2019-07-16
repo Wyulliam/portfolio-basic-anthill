@@ -3,7 +3,7 @@ using Nursery.Core.AntTypes.Getters;
 using Nursery.Core.Repositories;
 using Xunit;
 
-namespace Nursery.Tests
+namespace Nursery.Tests.AntTypes
 {
     public class DefaultAntTypeGetterTests
     {

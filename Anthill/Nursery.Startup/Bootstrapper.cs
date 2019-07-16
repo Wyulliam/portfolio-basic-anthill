@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Nursery.Core;
+using Nursery.Core.Eggs.Checker.Factory;
 using Nursery.Core.Factory;
 using Nursery.Core.Repositories;
 using Nursery.Data.Repositories;
@@ -18,6 +19,7 @@ namespace Nursery.Startup
             services.AddScoped<INursery, Core.Nursery>();
             services.AddScoped<INurseryAbstractFactory, NurseryAbstractFactory>();
             services.AddScoped<IIncubatorFactory, IncubatorFactory>();
+            services.AddScoped<IEggsCheckerFactory, EggsCheckerFactory>();
 
             services.AddScoped<IAntTypeRepository, AntTypeRepository>();
             services.AddScoped<IEggRepository, EggRepository>();

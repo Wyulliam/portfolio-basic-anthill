@@ -3,10 +3,9 @@ using Nursery.Core.Eggs.DTOs;
 using Nursery.Core.Eggs.Entities;
 using Nursery.Core.Eggs.Generators;
 using Nursery.Core.Repositories;
-using System;
 using Xunit;
 
-namespace Nursery.Tests
+namespace Nursery.Tests.Egg
 {
     public class DefaultEggGeneratorTests
     {
@@ -22,11 +21,9 @@ namespace Nursery.Tests
         [Fact]
         public void should_generate_eggs()
         {
-            var dueDate = DateTime.Now;
+            _eggGenerator.Generate(new EggsDTO("Warrior", 5));
 
-            _eggGenerator.Generate(new EggsDTO("Warrior", 5), dueDate);
-
-            _repository.Received(1).Create(Arg.Is<Eggs>(a => a.Quantity == 5 && a.Type == "Warrior" && a.GeneratedDate == dueDate));
+            _repository.Received(1).Create(Arg.Is<Eggs>(a => a.Quantity == 5 && a.Type == "Warrior"));
         }
     }
 }

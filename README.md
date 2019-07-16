@@ -26,6 +26,9 @@ Used to create a code-first application. This way, we can generate the database 
 With entity framework, I'm using a simple SQLite database, since there is no need, in this project, for a SQL Server database or similar.
 Entity Framework is a good call because we can change the SQLite database for an SQL Server, for example, and we would only change the connection string in the Context classes.
 
+## MediatR
+With MediatR we can send commands/events inside our application, meaning we can decouple the implementations. The Nursery, for example, doesn't need to know that the Incubator is the responsible for incubating eggs, the Nursery just send a command and it knows that someone will handle the request.
+
 ## TDD
 Using Test Driven Development on your project will not only make it less susceptible to bugs, it will increase your productivity and make your code way more clean. In this project, my approach was to create the Queen's implementation, and start unit testing its functions, using interfaces that were not even implemented. This way, I can guarantee that the Queen's implementation is working the way it is supposed to work. After that, I implemented the next interface, and started unit testing it the same way, and so it goes.
 
@@ -39,6 +42,9 @@ Take for example, the AntTypeRepository: its responsability is to get/save ant t
 
 ### Open Closed
 Code should be open to extensions, but closed to modifications. In this project, we have a Nursery, where it care for the ant eggs. The Queen will always have access to the Nursery methods, even if we decided to create a SpecialNursery. We could give the Queen a whole new Nursery without needing to change any Queen's behaviour.
+
+### Interface Segregation
+One class should not depend on an interface with methods that the class does not use. If your class implements more methods that it should, you are probably using the wrong abstraction.
 
 ### Dependency Injection
 With Dependency Injection, class are not bounded directly to another classes implementation. Rather than creating a new instance of a class inside your code, you "inject" it in its constructor, decoupling them and making it easier for changes. 
@@ -54,7 +60,9 @@ Using the Repository Pattern, we can make our code persistence ignorant. It does
 - [Why TDD](https://jrebel.com/rebellabs/if-and-when-you-should-use-test-driven-development/)
 - [Single Responsability Principle](https://hackernoon.com/you-dont-understand-the-single-responsibility-principle-abfdd005b137)
 - [Open Closed Principle](https://deviq.com/open-closed-principle/)
+- [Interface Segregation](https://hackernoon.com/interface-segregation-principle-bdf3f94f1d11)
 - [Dependency Injection](https://www.infoworld.com/article/2974298/exploring-the-dependency-injection-principle.html)
 - [Using Abstract Factories](https://sourcemaking.com/design_patterns/abstract_factory)
 - [Using Repository Pattern](https://deviq.com/repository-pattern/)
 - [More about Entity Framework](https://www.itprotoday.com/development-techniques-and-management/5-reasons-why-entity-framework-can-be-your-best-friend)
+- [More about MediatR](https://ardalis.com/using-mediatr-in-aspnet-core-apps)
